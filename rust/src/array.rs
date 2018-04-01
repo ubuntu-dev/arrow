@@ -27,17 +27,17 @@ use super::list::List;
 use super::error::*;
 
 pub enum ArrayData {
-    Boolean(Buffer<bool>),
-    Float32(Buffer<f32>),
-    Float64(Buffer<f64>),
-    Int8(Buffer<i8>),
-    Int16(Buffer<i16>),
-    Int32(Buffer<i32>),
-    Int64(Buffer<i64>),
-    UInt8(Buffer<u8>),
-    UInt16(Buffer<u16>),
-    UInt32(Buffer<u32>),
-    UInt64(Buffer<u64>),
+    Boolean(Rc<Buffer<bool>>),
+    Float32(Rc<Buffer<f32>>),
+    Float64(Rc<Buffer<f64>>),
+    Int8(Rc<Buffer<i8>>),
+    Int16(Rc<Buffer<i16>>),
+    Int32(Rc<Buffer<i32>>),
+    Int64(Rc<Buffer<i64>>),
+    UInt8(Rc<Buffer<u8>>),
+    UInt16(Rc<Buffer<u16>>),
+    UInt32(Rc<Buffer<u32>>),
+    UInt64(Rc<Buffer<u64>>),
     Utf8(List<u8>),
     Struct(Vec<Rc<Array>>)
 }
@@ -46,7 +46,7 @@ macro_rules! arraydata_from_primitive {
     ($DT:ty, $AT:ident) => {
         impl From<Vec<$DT>> for ArrayData {
             fn from(v: Vec<$DT>) -> Self {
-                ArrayData::$AT(Buffer::from(v))
+                ArrayData::$AT(Rc::new(Buffer::from(v)))
             }
         }
 

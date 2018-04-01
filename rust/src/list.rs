@@ -15,6 +15,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
+use std::rc::Rc;
 use std::str;
 
 use bytes::{BytesMut, BufMut};
@@ -22,8 +23,8 @@ use bytes::{BytesMut, BufMut};
 use super::buffer::Buffer;
 
 pub struct List<T> {
-    pub data: Buffer<T>,
-    pub offsets: Buffer<i32>
+    pub data: Rc<Buffer<T>>,
+    pub offsets: Rc<Buffer<i32>>
 }
 
 impl<T> List<T> {

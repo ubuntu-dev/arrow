@@ -15,10 +15,12 @@
 // specific language governing permissions and limitations
 // under the License.
 
+use std::rc::Rc;
+
 use super::buffer::Buffer;
 
 pub struct Bitmap {
-    bits: Buffer<u8>
+    bits: Rc<Buffer<u8>>
 }
 
 impl Bitmap {
