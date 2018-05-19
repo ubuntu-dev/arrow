@@ -1,0 +1,65 @@
+//! Automatically generated, do not modify
+//!
+//! Flatbuffer definitions for the flatbuf namespace.
+//mod metadataversion;
+
+mod UnionMode;
+mod Precision;
+mod DateUnit;
+mod TimeUnit;
+mod IntervalUnit;
+//mod `type`;
+mod Endianness;
+pub mod Null;
+pub mod Struct_;
+pub mod List;
+pub mod FixedSizeList;
+pub mod Map;
+pub mod Union;
+pub mod Int;
+pub mod FloatingPoint;
+pub mod Utf8;
+pub mod Binary;
+pub mod FixedSizeBinary;
+pub mod Bool;
+pub mod Decimal;
+pub mod Date;
+pub mod Time;
+pub mod Timestamp;
+pub mod Interval;
+pub mod KeyValue;
+pub mod DictionaryEncoding;
+pub mod Field;
+pub mod Buffer;
+pub mod Schema;
+
+//pub use self::metadataversion::*;
+pub use self::UnionMode::*;
+pub use self::Precision::*;
+pub use self::DateUnit::*;
+pub use self::TimeUnit::*;
+pub use self::IntervalUnit::*;
+//pub use self::DType::*;
+pub use self::Endianness::*;
+pub use self::Null::{Null, NullBuilder};
+pub use self::Struct_::{Struct_, Struct_Builder};
+pub use self::List::{List, ListBuilder};
+pub use self::FixedSizeList::{FixedSizeList, FixedSizeListBuilder};
+pub use self::Map::{Map, MapBuilder};
+pub use self::Union::{Union, UnionBuilder};
+pub use self::Int::{Int, IntBuilder};
+pub use self::FloatingPoint::{FloatingPoint, FloatingPointBuilder};
+pub use self::Utf8::{Utf8, Utf8Builder};
+pub use self::Binary::{Binary, BinaryBuilder};
+pub use self::FixedSizeBinary::{FixedSizeBinary, FixedSizeBinaryBuilder};
+pub use self::Bool::{Bool, BoolBuilder};
+pub use self::Decimal::{Decimal, DecimalBuilder};
+pub use self::Date::{Date, DateBuilder};
+pub use self::Time::{Time, TimeBuilder};
+pub use self::Timestamp::{Timestamp, TimestampBuilder};
+pub use self::Interval::{Interval, IntervalBuilder};
+pub use self::KeyValue::{KeyValue, KeyValueBuilder};
+pub use self::DictionaryEncoding::{DictionaryEncoding, DictionaryEncodingBuilder};
+pub use self::Field::{Field, FieldBuilder};
+pub use self::Buffer::{Buffer, BufferBuilder};
+pub use self::Schema::{Schema, SchemaBuilder};

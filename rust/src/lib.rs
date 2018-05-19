@@ -21,6 +21,9 @@ extern crate libc;
 #[macro_use]
 extern crate serde_json;
 
+#[macro_use]
+extern crate flatbuffers;
+
 pub mod array;
 pub mod bitmap;
 pub mod buffer;
@@ -31,3 +34,6 @@ pub mod list;
 pub mod list_builder;
 pub mod memory;
 pub mod memory_pool;
+
+// generated code - bad practice to store this in the github repo
+pub mod flatbuf;
